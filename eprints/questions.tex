@@ -1,0 +1,1399 @@
+
+
+
+
+
+
+
+
+\documentclass[11pt]{article}
+\usepackage{latexsym}
+%\usepackage{showlabels}
+%\setlength{\textheight}{7.5in}
+%\setlength{\textwidth}{5.2in}
+%\flushbottom
+%\documentclass[10pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,graphicx}
+\usepackage{comment}
+%\usepackage{showkeys}
+%\usepackage{epsf}
+%\raggedbottom
+%\textwidth 6in
+%\oddsidemargin .25in
+%\evensidemargin .25in
+%\textheight 8.5in
+%\topmargin 0in
+
+
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{q}[thm]{Q}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{main}{Main Theorem}{}
+
+\theoremstyle{remark}
+\newtheorem{example}[thm]{Example}
+\newtheorem{exercise}[thm]{Exercise}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{examples}[thm]{Examples}
+
+\def\b{\begin{q}}
+\def\e{\end{q}}
+
+
+\bibliographystyle{amsalpha}   %plain
+
+
+\def\R{{\mathbb R}}
+\def\Z{{\mathbb Z}}
+\def\H{{\mathbb H}} 
+\def\Q{{\mathbb Q}} 
+\def\G{{\Gamma}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+
+\begin{document}
+\centerline{\Huge\bf Questions in Geometric Group Theory}
+\vskip 1cm
+\centerline{\Large Collected by Mladen Bestvina}
+\centerline{\tt bestvina@math.utah.edu}
+\centerline{\tt http://www.math.utah.edu/$\sim$bestvina}
+\centerline{Major revision August 22, 2000}
+\vskip 1cm
+Notes: 
+
+
+I regret that I am unable to offer 1M for solutions.
+
+Disclaimer: Names in parentheses reflect the person I heard the question from.
+The actual source may be different. Any corrections, new questions, additional
+references, clarifications, solutions and info welcome.
+
+For questions with a decidedly more combinatorial flavor, see \newline
+{\tt
+  http://www.grouptheory.org}
+
+\section{Hyperbolic Groups}
+
+\subsection{Characterization and Structure}
+
+
+
+\begin{q}
+Suppose $G$ admits a finite $K(G,1)$. If $G$ does not contain any
+Baumslag-Solitar subgroups $BS(m,n)$, is $G$ necessarily hyperbolic? If $G$
+embeds in a hyperbolic group, is it hyperbolic? 
+\end{q}
+
+The answer is no if the
+``finite $K(G,1)$'' assumption is replaced by ``finitely presented'' by
+[Brady].
+
+Remarks: $BS(m,n)=<x,y|x^{-1}y^mx=y^n>$ for $m,n\neq 0$.
+One considers $\Z\times\Z$ as a Baumslag-Solitar group $BS(1,1)$. 
+
+The answer is not known even when $Y=K(G,1)$ is a non-positively curved
+2-complex. In that case, the question becomes: If the universal cover $\tilde
+Y$ contains a flat, does $G$ contain $\Z\times\Z$?
+
+It is possible that there are counterexamples that contain certain infinite
+quotients of Baumslag-Solitar groups. A modification of the above question
+would be: 
+
+\begin{q}
+Suppose $G$ admits a finite $K(G,1)$, does not contain $\Z\times\Z$, and
+whenever $x\in G$ is an infinite order element such that $x^m$ and $x^n$ are
+conjugate, then $|m|=|n|$. Is $G$ hyperbolic?
+\end{q}
+
+
+
+All known constructions of hyperbolic groups of large (rational, or integral
+for torsion-free groups) cohomological dimension use arithmetic groups as
+building blocks. See [Charney-Davis, Strict Hyperbolization], [Gromov,
+Asymptotic Invariants, Ch.7]. Gromov loosely conjectures that this is always
+the case. The following is an attempt to make the question precise.
+
+\begin{q}
+For every $K>0$ there is $N>0$ such that every
+    word-hyperbolic group $G$ of rational cohomological dimension $\geq N$
+    contains an arithmetic lattice of dimension $\geq K$.
+\end{q}
+
+Note: An earlier formulation of this question required $N=K$ for $K$ large. A
+counterexample to the stronger formulation was found by [Mosher-Sageev], see
+{\tt http://andromeda.rutgers.edu$/\sim$mosher/HighDHyp.ps}. See also [Gromov,
+Asymptotic Invariants, 7.VI]. One might want to allow certain quotients of
+arithmetic groups as well.
+
+The following is another instance of Gromov's loose conjecture.
+
+\begin{q}
+Conjecture (Davis): All hyperbolic
+Coxeter groups have uniformly bounded rational (or virtual) cohomological
+dimension. 
+\end{q}
+[Moussong] has a criterion for recognizing word-hyperbolicity
+from the Coxeter diagram.
+
+Update (May 2002): T. Januszkiewicz and J. Swiatkowski have
+constructed hyperbolic Coxeter groups of arbitrarily large
+dimension. This answers both questions above. The preprint is available
+at
+
+{\tt http://www.math.uni.wroc.pl/$\sim$tjan/Papers/submitted.html}
+
+\begin{q}
+(Davis) If $G$ is word-hyperbolic, does the Rips complex $P_d(G)$
+have an equivariant negatively curved metric for $d$ sufficiently large?
+\end{q}
+
+A potential counterexample is the mapping torus of a hyperbolic automorphism
+of a free group. 
+
+\subsection{Subgroups of Hyperbolic Groups}
+
+\begin{q}
+(Gromov) Does every 1-ended word-hyperbolic group contain a
+closed hyperbolic surface subgroup?
+\end{q} 
+
+\begin{q}
+(Gromov) For a given $n$ is there an example of a hyperbolic group of
+dimension $n$ in which every infinite index subgroup is free? Or in which
+there are no (quasi-convex) subgroups with codimension $\leq k$ for a given
+$k\leq n-2$.
+\end{q}
+
+
+
+\begin{q}\label{conjugates}
+  (Swarup) Suppose $H$ is a finitely presented subgroup of a word-hyperbolic
+  group $G$ which has finite index in its normalizer. Assume that there is
+  $n>0$ such that the intersection of $n$ distinct conjugates of $H$ is always
+  finite. Is $H$ quasi-convex in $G$?
+\end{q}
+
+The converse is a theorem of
+[Gitik-Mitra-Rips-Sageev]. A special case worth considering is when
+$G$ splits over $H$ when Gersten's converse of the combination theorem
+might be helpful.
+
+Remark(Gitik): The problem is open even when $H$ is malnormal in $G$.
+
+\begin{q}
+(Mitra) Let $X_G$ be a finite 2-complex with fundamental group $G$. Let
+$X_H$ be a cover corresponding to the f.p. subgroup $H$. Let $I(x)$
+denote the injectivity radius of $X_H$ at $x$.
+Does $I(x) \rightarrow \infty$ as $x\rightarrow\infty$
+imply that $H$ is quasi-isometrically embedded in $G$ ?
+\end{q}
+ 
+A positive answer to the above question for $G$ hyperbolic would imply
+a positive answer to Q \ref{conjugates}.
+
+\b
+(Canary) Let $G$ be word-hyperbolic and $H$ a f.p. subgroup of $G$.
+Suppose that for all $g\in G$ there is $n>0$ such that $g^n\in H$. Does
+it follow that $H$ has finite index in $G$? \e
+
+Yes if $H$ is quasi-convex,
+since then $\Lambda(H)=\Lambda(G)$.
+
+\b
+(Whyte)
+Let $\Gamma$ be a 1-ended hyperbolic group. Can every infinite index
+subgroup be free?
+\e
+
+\b
+(Whyte)
+Let $\Gamma$ be a 1-ended hyperbolic group. Can a finite index
+subgroup of $\Gamma$ be isomorphic to a subgroup of $\Gamma$ of
+infinite index?
+\e
+
+\subsection{Relative Questions}
+
+\begin{q}
+(Swarup) Prove the combination theorem for relatively hyperbolic
+groups.
+\end{q}
+
+
+
+\b
+(Swarup) There is a theorem of Bowditch saying that if $G$
+acts on a compact metrizable space $X$ so that the action is 
+properly discontinuous and cocompact on triples, then $G$ is a hyperbolic
+group and $X$ is its boundary. State and prove the analog in which one
+allows parabolics.
+\e
+
+
+
+
+
+
+
+
+
+\subsection{Residual Finiteness}
+
+\b
+Is every word-hyperbolic group residually finite?
+\e
+
+\noindent Notes: 
+
+a) D. Wise has constructed a finite 2-dimensional locally CAT(0) complex
+whose fundamental group is not RF.
+
+b) Z. Sela showed that torsion-free word-hyperbolic groups are Hopfian.
+
+c) M. Kapovich pointed out that there are non-linear word-hyperbolic
+groups.  Start with a lattice $G$ in quaternionic hyperbolic space and
+adjoin a ``random'' relation to get the desired group. Super-rigidity
+[Corlette, Gromov-Schoen]
+says that every linear representation of $G$ is either faithful or has
+finite image.
+
+\b
+(Dani Wise)
+{\rm Let $G^n$ denote the Cartesian product of $n$ copies of the 
+group $G$, and let $rank(G^n)$ be the smallest number of generators of $G^n$.} 
+
+\noindent
+{\bf Conjecture.} If $G$ is word-hyperbolic then
+$\lim_{n\to\infty}rank(G^n)=\infty$.\e
+
+The Conjecture is true if $G$ is finite and nontrivial, as can be seen by a
+simple pigeon-hole argument. It is also true if $G$ has a quotient for which
+the conjecture holds. In particular, it is true for groups that have a
+proper finite index subgroup. 
+
+The Conjecture is false if there is an epimorphism $G\to G\times G$. There is
+an example (Wise) of a 2-generator infinitely presented $C'(\frac{1}{6})$
+small cancellation group where the conjecture fails.
+
+\b (Dani Wise)
+Find ``nice'' (e.g. $CAT(0)$, automatic,...) groups where this
+conjecture fails.\e
+
+\subsection{Algorithms}
+
+\b (Epstein) Let $G$ be a word-hyperbolic group and $\partial G$ its boundary.
+Is there an algorithm to compute $\mathaccent20{H}^i(\partial G)\cong
+H^{i+1}(G,\Z G)$? In particular, is there an algorithm to decide whether
+$\mathaccent20{H}^i(\partial G)\cong \mathaccent20{H}^i(S^2)$ for all $i$? 
+\e
+If
+$\partial G$ has the cohomology of $S^2$ then it is homeomorphic to $S^2$
+(Bestvina-Mess) and modulo a finite normal subgroup $G$ is conjecturally
+commensurable to a hyperbolic 3-manifold group. 
+
+{\it Remark} (Epstein, Sela) There is an algorithmic procedure to determine
+the number of ends (i.e. $\mathaccent20{H}^0(\partial G)$) of a hyperbolic
+group. First, one finds algorithmically an explicit $\delta$ (of
+$\delta$-hyperbolicity). Then one finds an automatic structure, from which it
+can be immediately read if the group is finite or 2-ended. One can run an
+(enumeration) machine that terminates if the group nontrivially splits over a
+finite subgroup, i.e. if it has infinitely many ends. Finally, there is a
+machine (Gerasimov) that terminates if the group is 1-ended. This is based on
+the property of 1-ended groups (proved by Bowditch) that there is a universal
+bound on the length of a shortest path connecting points on a sphere $S(R)$ at
+distance $<100+100\delta$ and disjoint from the sphere $S(R-10-10\delta)$.
+
+{\it Remark} (Sela)
+For 1-ended torsion-free hyperbolic groups there is an algorithm
+based on Sela's work on the isomorphism problem to decide if the group splits
+over $\Z$. This algorithm can be ``relativized'' to find the JSJ decomposition
+as well. The details of this have not appeared. The case of groups with
+torsion is open. 
+
+
+
+\subsection{Maps Between Boundaries}
+
+\b
+(M. Mitra) Let $G$ be a word-hyperbolic group and $H$ a
+word-hyperbolic subgroup. Does the inclusion $H\to G$ extend to a
+continuous map between the boundaries $\partial H\to\partial G$? \e
+
+A theorem of Cannon-Thurston says that this is the case when $G$ is the
+fundamental group of a hyperbolic 3-manifold that fibers over $S^1$ and $H$ is
+the group of the fiber. The map $S^1\to S^2$ is surjective and it can be
+explicitely described in terms of the stable and unstable laminations of the
+monodromy. When the manifold is closed, the map is finite-to-1.
+
+By a theorem of Mitra, if $G$ is a graph of groups with one vertex group $H$,
+all vertex groups hyperbolic, and all edge-to-vertex monomorphisms
+quasi-isometric embeddings, then the answer is yes.
+
+\b
+(Swarup) Suppose $G$ is a hyperbolic group which is a graph of
+hyperbolic groups such that all edge to vertex inclusions are
+quasi-isometric embeddings.  [Mitra] shows that for each vertex group
+$V$ inclusion $V\hookrightarrow G$ induces a continuous
+Cannon-Thurston map $\partial V\to \partial G$.  Describe the
+point-preimages. In particular, show that the map is finite-to-one.
+\e
+
+
+
+\subsection{Miscellaneous}
+
+\b \label{thurston}
+(Thurston) Is every closed hyperbolic 3-manifold finitely covered
+by one that fibers over the circle?\e
+
+\b
+(Jim Anderson) Can the fundamental group of a hyperbolic 3-manifold
+that fibers over the circle contain a subgroup that is locally free but
+not free? \e
+There are such hyperbolic 3-manifolds, so the negative answer
+to this question would provide a counterexample to Q \ref{thurston}.
+
+Richard Kent constructs an infinite family of examples. See\newline
+{\tt http://www.math.utexas.edu/$\sim$rkent/cuff}
+
+\b (Ian Leary)
+Is there a version of the Kan-Thurston theorem using only 
+CAT(-1) groups, or word hyperbolic groups?  (The statement 
+should be:  for any finite simplicial complex X, there is a
+locally CAT(-1) polyhedral complex $Y$ and a map $Y \to X$ 
+that is surjective on fundamental groups and induces an 
+isomorphism on homology for any local coefficients on $X$.)  
+\e
+
+\b (Ian Leary)
+Is there any restriction on the homotopy type of the 
+quotient $R_d(G)/G$ for $G$ word hyperbolic?  
+\e
+Here $R_d$ is 
+the Rips complex, and $d$ should be taken to be large 
+(so that $R_d(G)$ is a model for the universal proper $G$-space).  
+     Of course this space is a finite complex, but is there any 
+other restriction on its homotopy type?   
+
+Background: Leary-Nucinkis proved that any complex has the homotopy 
+type of $\underline EG/G$ for some discrete group $G$, where
+$\underline EG$ denotes 
+the universal proper $G$-space.  (This is a version of the
+Kan-Thurston 
+theorem for $\underline EG$ instead of $EG$.)  
+
+Leary can answer the analogues of both questions above with CAT(0) 
+in place of CAT(-1) or word hyp., as well as the 2-dimensional 
+cases of both using either CAT(-1) groups or small cancellation 
+groups. The trouble with getting to higher dimensions is that 
+most proofs of Kan-Thurston type results use direct products to 
+make higher dimensional groups.  
+
+\section{$CAT(0)$ groups}
+
+
+\b
+(Swarup) Is there a proof of Johannson's theorem that $Out(\pi_1
+M)$ is virtually generated by Dehn twists for $M$ a Haken 3-manifold
+along the lines of Rips-Sela's theorem that $Out(G)$ is virtually
+generated by Dehn twists for hyperbolic $G$? Is this true for CAT(0)
+groups? In particular, if $G$ is a CAT(0) group and $Out(G)$ is
+infinite, does $G$ admit a Dehn twist of infinite order? 
+\e
+By a Dehn
+twist we mean an automorphism $\phi$ of the following form: either $G$
+splits as $A*_CB$, $t\in C$ is central, $\phi(a)=a$ for $a\in A$ and
+$\phi(b)=t^{-1}bt$ for $b\in B$; or $G$ is an HNN extension and $\phi$
+is defined similarly.
+
+
+
+\b
+(Gromov) If $G$ admits a finite dimensional $K(G,1)$, does
+$G$ act properly discontinuously by isometries on a complete CAT(0)
+space?
+\e
+
+\b
+(Eilenberg-Ganea) Is there a group $G$ of cohomological dimension 2 and
+geometric dimension 3?\e
+
+\b
+(Whitehead) Is every subcomplex of an aspherical 2-complex aspherical?\e
+
+
+
+\b
+(Exercise in [Ballmann-Gromov-Schroeder, p.2]) Take a closed
+surface $S$ of genus $\geq 2$. Let $V=S\times S$ and let
+$\Sigma\subset V$ denote the diagonal. Let $\tilde V$ be a
+nontrivially ramified finite cover of $V$ along $\Sigma$. Then $\tilde
+V$ has a natural piecewise hyperbolic CAT(0) metric. Show that $\tilde
+V$ admits no $C^2$-smooth Riemannian metric with curvature $K\leq 0$.\e
+
+\b
+Suppose a group $G$ acts properly discontinuously and cocompactly
+by isometries on two CAT(0) spaces $X$ and $Y$. Croke-Kleiner have
+examples where the boundaries $\partial X$ and $\partial Y$ are not
+equivariantly homeomorphic. Is there a compact metric space $Z$ and
+cell-like maps $Z\to\partial X$, $Z\to\partial Y$? \e
+A surjective map
+between metric compacta is {\it cell-like} if each point preimage is
+cell-like. A compact metric space is cell-like if when embedded in the
+Hilbert cube $I^\infty$ (or $I^n$ if it is finite-dimensional) it is
+contractible in each of its open neighborhoods.
+
+\b
+(D. Wise) Let $G$ act properly discontinuously 
+and cocompactly on a CAT(0) space
+(or let $G$ be automatic).
+Consider two elements $a,b$ of $G$.
+Does there exist $n>0$ such that 
+either the subgroup
+$\langle a^n,b^n\rangle$ is free
+or
+$\langle a^n,b^n\rangle$ is abelian?\e
+
+\b
+Do CAT(0) (or (bi)automatic) groups satisfy the Tits
+alternative?\e
+
+\b Does every Artin group have a finite $K(G,1)$? \e
+Yes for Artin
+groups of finite type (meaning that the associated Coxeter group is
+finite) by the work of Deligne.   
+
+\b (Bestvina)
+Let $L_1,L_2,\cdots,L_n$ be a finite collection of straight lines in the
+plane $\R^2$. Does the fundamental group of $$X=\R^2\times\R^2\setminus
+\bigcup_{i=1}^n L_i$$ admit a finite $K(\pi,1)$?\e
+
+By [Deligne] the answer is yes for simplicial arrangements. In general $X$ is
+not aspherical, but in all examples one understands, $X$ becomes aspherical
+after attaching finitely many $\geq 3$-cells. It is not even known whether
+$\pi_1(X)$ is torsion-free. A similar question can be asked about
+finite hyperplane arrangements in $\R^m$.
+
+\b
+(Eric Swenson)
+Let $X$ be a $CAT(0)$ metric space and $G$ a finitely generated group that
+acts properly discontinuously by isometries on $X$.
+
+1. Can $G$ be an infinite torsion group? The expected answer is yes.
+
+2. If the action is cocompact, can $G$ contain an infinite torsion subgroup?
+   The expected answer is no.
+\e
+
+\b
+(Kim Ruane)
+Let $G$ be a Coxeter group, e.g. right-angled,  and assume that $G$ acts
+properly discontinuously and by isometries on a $CAT(0)$ space $X$. How is $X$
+different from the Coxeter complex? Specifically:
+
+Suppose that $H$ is a special subgroup of $G$. Is there a closed convex
+subset of $X$ on which $H$ acts cocompactly?\e
+
+
+\b (Ruth Charney) Classify Coxeter groups up to isomorphism. \e
+Interesting examples of isomorphic Coxeter groups (and Artin groups)
+with non-isomorphic diagrams were given by Noel Brady, Jon McCammond,
+Bernhard Muehlherr, and Walter Neumann. In
+the opposite direction, conditions under which isomorphism of groups
+implies isomorphism of diagrams were given by Charney-Davis, David
+Radcliffe, Anton Kaul.  \b (Ruth Charney) Classify Artin groups up to
+isomorphism. \e
+
+\b
+(Ruth Charney)
+Are all finite type Artin groups linear? \e
+Braid groups are linear by the
+   recent work of Bigelow and Krammer. 
+
+Update: A.M. Cohen and D.B. Wales and independently F. Digne show that
+the answer is yes. See {\tt
+http://front.math.ucdavis.edu/math.GR/0010204} and {\tt
+http://www.mathinfo.u-picardie.fr/digne} 
+
+\b (Ruth Charney) Are all
+[finite type] Artin groups $CAT(0)$? \e The answer is yes for small
+numbers of generators by the work of Krammer, Tom Brady, Jon
+McCammond. The question is open even for braid groups.
+
+\b
+(Ruth Charney)
+Are all Artin groups automatic?\e
+
+\b
+(Ross Geoghegan)
+Let $M$ be a proper $CAT(0)$ space. We say that $M$ is {\it almost
+  geodesically complete} if there is $R\geq 0$ such that for all $a,b\in M$
+  there is an infinite geodesic ray starting at $a$ and passing within $R$ of
+  $b$. 
+
+If $Isom(M)$ acts cocompactly on $M$, is $M$ almost
+geodesically complete? \e
+
+Note: It is a theorem of Ontaneda that if a discrete group acts cocompactly by
+isometries on $M$ and if $H^*_c(M)\neq 0$ then $M$ is almost geodesically
+complete. 
+
+\b
+(Dani Wise)
+{\rm A {\em triplane} is a CAT(0) space obtained by gluing together
+three Euclidean half-planes along their boundaries.
+%
+ Say that a CAT(0) space $X$ has {\em isolated flats} if $X$ does not
+contain an isometrically embedded triplane.
+
+Let $G$ act on a CAT(0) space $X$. Recall that a subgroup $H$ is
+quasiconvex relative to this action provided that for a point
+$x\in X$ there is a constant $K$ such that for any two points in
+the orbit $Hx$, the geodesic connecting these points lies in a
+$K$-neighborhood of $Hx$.}
+
+{\bf Conjecture:} Let $G$ act properly discontinuously and
+cocompactly on a CAT(0) space $X$ with isolated flats. Let $H$ be
+a finitely generated subgroup of $G$. Then the inclusion of $H$
+in $G$ is a quasi-isometric embedding if and only if $H$ is a
+quasiconvex subgroup relative to the action of $G$ on $X$.
+\e
+
+Notes: Wise's, C.Hruska, has now proven this conjecture in the
+case that $X$ is a CAT(0) $2$-complex. A counterexample, without the
+isolated flats condition, is provided by $G=F_2\times\Z=<a,b>\times
+<t>$ and $H=<at,bt>$ with the usual action of $G$ on
+$(tree)\times\R$. $H$ is not quasi-convex since the intersection
+$H\cap <a,b>$ is not finitely generated.
+
+\section{Free Groups}
+
+\b
+(Hanna Neumann Conjecture) If $A$ and $B$ are nontrivial subgroups
+of a free group, then $rk(A\cap B)-1\leq (rk(A)-1)(rk(B)-1)$. \e
+Hanna
+Neumann showed [Publ. Math. Debrecen 4 (1956), 186--189] $rk(A\cap
+B)-1\leq 2(rk(A)-1)(rk(B)-1)$, and R.G. Burns [Math. Z. 119 (1971),
+121--130] strengthened the inequality to $rk(A\cap B)-1\leq
+2(rk(A)-1)(rk(B)-1)- \min(rk(A)-1,rk(B)-1)$. In many cases, the
+conjecture holds, see Neumann, Walter D.: On intersections of finitely
+generated subgroups of free groups. Groups---Canberra 1989, 161--170,
+Lecture Notes in Math., 1456, Springer, Berlin, 1990. See also Dicks,
+Warren: Equivalence of the strengthened Hanna Neumann conjecture and
+the amalgamated graph conjecture. Invent. Math. 117 (1994), no. 3,
+373--389.
+
+\b
+(Swarup) If $G$ is a Fuchsian group, define $area(G)$ to be the
+area of the convex core of $\H^2/A$. Since $area(A)=2\pi
+(rk(A)-1)$ for Fuchsian groups which are free, the Hanna Neumann
+Conjecture can be phrased in terms of free Fuchsian groups: $2\pi
+area(A\cap B)\leq area(A)area(B)$ whenever $A$ and $B$ are nontrivial
+free subgroups
+of a Fuchsian group. Prove such inequalities (possibly with a worse
+constant) for (not necessarily free) torsion-free quasi-convex
+subgroups of a quasi-convex Kleinian group in $\H^n$, where $area$
+is replaced by the $n$-dimensional volume of the convex core. \e
+
+
+
+
+\b
+(J. Cornick) a) Let $G$ be a f.g. group such that every f.p. subgroup
+is free. Is $G$ free?
+
+b) If $G$ is f.g. and the homological dimension $hd\ G=1$, is $G$ free?
+\e
+
+Note: Yes to a) implies yes to b). There are counterexamples to a) in
+which every f.p. subgroup is cyclic and torsion-free.
+
+
+
+\subsection{Limit groups (Zlil Sela)}
+The definition of limit groups involves group actions on $\R$-trees and is
+given by Sela in his work on equations and inequalities over free groups. It
+is a nontrivial theorem that a group $G$ is a limit group iff it is
+$\omega$-residually free, i.e. for any finite subset $F$ of $G$ there is a
+homomorphism from $G$ to a free group whose restriction to $F$ is
+injective. Every limit group is finitely presented.
+
+\b
+{\bf Conjecture.} A finitely generated group admits a free action on an
+$\R^n$-tree for some $n$ iff it is a limit group.\e
+
+The ``if'' part follows from Sela's work.
+
+\b
+{\bf Conjecture.} Limit groups are $CAT(0)$.\e
+
+\b
+Characterize groups of the form $F_m*_\Z F_n$ which are limit
+groups. \e
+
+\b
+Characterize 1-relator groups which are limit
+groups. \e
+
+\b (Swarup)
+Show that a limit group is relative hyperbolic w.r.t its maximal 
+abelian subgroups of rank bigger than one.\e
+
+Sela showed that limit groups that contain no $\Z\times\Z$ are hyperbolic.
+
+\subsection{Definable sets in $F_n$ (Zlil Sela)}
+
+A subset $S$ of $F_n^k$ is {\it definable} if there is a first order sentence
+with $k$ variables $x_1,x_2,\cdots,x_k$ which is true iff
+$x_1,x_2,\cdots,x_k\in S$.
+
+\b
+{\bf Conjecture.} Let $n>1$. The set $$\{(x_1,x_2,\cdots,x_n)\in
+F_n^n|x_1,x_2,\cdots,x_n \text{ is a basis of }F_n\}$$ is not definable.\e
+
+\b
+{\bf Conjecture.} The only definable subgroups of $F_n$ are cyclic and the
+entire group. \e
+
+\subsection{Genus in free groups (Zlil Sela)}
+The {\it genus} of an element $x$ in the commutator subgroup of $F_n$ is the
+smallest $g$ such that we may write $x=[y_1,y_2][y_3,y_4]\cdots
+[y_{2g-1},y_{2g}]$ for some $y_i\in F_n$. Thus there is a map of the surface
+of genus $g$ and one boundary component into the rose with boundary
+corresponding to $x$. Applying an automorphism of the surface produces other
+ways of writing $x$ as a product of $g$ commutators, and we call all such {\it
+  Nielsen  equivalent}. One knows that there is a uniform bound $f(g)$
+(independent of $x$) to the number of Nielsen equivalence classes in which an
+element of genus $g$ can be written as a product of $g$ commutators.
+
+\b
+Give an explicit upper bound for $f(g)$.\e
+
+
+
+
+\section{Transformation Groups}
+
+
+\b
+(de la Harpe) Is $PSL_2(\R)$ a maximal closed subgroup of
+$Homeo_+(S^1)$? \e
+
+\b Is there a proper closed subgroup of $Homeo_+(S^1)$ that acts transitively
+on (unordered) 4-tuples? Or $k$-tuples ($k\neq 3$)? Relation to earthquakes?
+\e
+
+\b
+(Christian Skau) There are many examples of groups acting on
+non-homogeneous compacta with all orbits dense (boundaries of
+word-hyperbolic groups, limit sets of Kleinian groups). Are there such
+examples with group $=\Z$ (or amenable group)?\e
+
+\b
+(Swarup) Suppose $G$ is a 1-ended finitely presented group that
+acts on a compact connected metric space $X$ as a convergence
+group. What can be said about $G$ if $X$ has cut points? Does $X$ have
+to be locally connected?  The model theorem of [Bowditch] and [Swarup]
+says that if $G$ is word hyperbolic, then $X$ is locally connected and
+doesn't have cut points.  In another interesting case, when $G$ is a
+geometrically finite Kleinian group and $X$ its limit set, cut points
+can arise, for example if $G$ splits over a parabolic subgroup.\e
+
+\section{Kleinian Groups}
+
+
+\b
+(Jim Anderson) If $G$ is a group of isometries of $\H^n$, denote
+by $Ax(G)$ the set of axes of the elements of $G$. If $G_1$ and $G_2$ are
+finitely generated and discrete, does $Ax(G_1)=Ax(G_2)$ imply that $G_1$
+and $G_2$ are commensurable?\e
+ Yes if $n=2$ and $G_1,G_2$ are arithmetic by
+[Long-Reid].
+
+\b (G. Courtois, Gromov) Let $M=\H^n/\Gamma$ be a closed hyperbolic
+manifold with $n\geq 3$. Does there exist a faithful non-discrete
+representation $\rho:\Gamma\to Isom_+(\H^n)$ (same $n$)?  \e The
+answer is yes (for certain manifolds) if the target is
+$Isom_+(\H^{n+1})$ (Kapovich -- use bending deformations), and also by
+Goldman's thesis if $n=2$. In the case of n=3 (Kapovich, Reid), if $M = {\bf
+H}^3/\Gamma$ and the trace-field of $\Gamma$ admits a real galois
+conjugate, then this can be used to induce a non-discrete faithful
+representation of $\Gamma$ with real character. For example any
+arithmetic Kleinian group derived from a quaternion algebra over a
+field of degree at least $3$ has such a real representation.
+
+
+
+\b
+(Ed Taylor) Does there exist a constant $c>0$ such that the limit set
+of every non-classical Schottky group has Hausdorff dimension $\geq c$.\e
+
+\b
+(Marden Conjecture) A torsion-free f.g. Kleinian group in dimension 3
+is topologically tame, i.e. the quotient 3-manifold is the interior of
+a compact 3-manifold.\e
+
+\b
+(Misha Kapovich)
+Suppose that $G$ is a finitely generated Kleinian group in 
+$Isom({\mathbb H}^n)$. Is it true that
+$$
+\delta(G) \le vcd(G)
+$$      
+with equality iff $G$ preserves a totally geodesic subspace 
+${\mathbb H}^k\subset  {\mathbb H}^n$ so that  ${\mathbb H}^k/G$ is compact? 
+\e
+
+Here $\delta(G)$ is the exponent of convergence of $G$ and $vcd$ is the
+virtual 
+cohomological dimension. Note that the answer is positive for geometrically 
+finite groups. 
+
+A weaker form of this question is: 
+
+\b (Misha Kapovich)
+Is there $\epsilon >0$ so that 
+$\delta(G)<\epsilon$ implies that $G$ is virtually free? \e
+
+\b (Misha Kapovich)
+Is there a finitely-generated discrete subgroup of $SO(n,1)$ whose 
+action on the limit set is not ergodic? Is not recurrent? 
+\e
+Note that 
+there are examples of finitely generated discrete subgroups of $SU(2,1)$ 
+which do not act ergodically on the limit set (however in that example the 
+action is recurrent). 
+
+
+\b (Misha Kapovich -- a variation on a question of Bridson). 
+Suppose that $G\subset 
+SL(n,{\mathbb R})$ is a discrete subgroup of type $FP_{\infty}$ (over 
+${\mathbb Z}$). Is it true that $G$ contains only finitely many $G$-conjugacy
+classes of finite subgroups? \e
+
+Note that there are examples (Feighn-Mess) where $G$ is a linear group 
+of type $FP_k$ for arbitrarily large (but finite) $k$ so that $G$ contains 
+infinitely many conjugacy classes of finite order elements. 
+
+Update: This problem is completely solved (the answer is no) by Ian
+Leary and Brita Nucinkis,
+
+{\tt ftp://byrd.math.uga.edu/pub/html/archive/leary-nucinkis.html}
+
+\section{Finiteness properties}
+
+\b (Ian Leary)
+Suppose $G$ is virtually of type FP over the field $F_p$ of $p$ 
+elements, and let $g$ be an element of order $p$.  Is the 
+centralizer of $g$ in $G$ also virtually of type FP over $F_p$?  
+\e
+
+If $G$ acts cocompactly on an $F_p$-acyclic space $X$, then 
+the centralizer of $g$ acts cocompactly on $X^g$ = the set 
+of fixed points of $g$, which is also $F_p$-acyclic by 
+Smith theory.  So in this case the answer is yes.   
+
+\b (Ian Leary)
+Is there a group of finite vcd that does not act with finite 
+stablizers on an acyclic complex of dimension equal to its 
+vcd?  
+\e
+
+This question is sometimes called Brown's conjecture, 
+although more often Brown's conjecture is taken to be the 
+question of whether there is a universal proper G-space of 
+dimension equal to the vcd.  The answer to this latter 
+question is "no" --- Leary and Nucinkis have examples for each $n$ 
+of groups for which the vcd is $2n$ but the minimal dimension
+of the universal proper $G$-space is $3n$.
+
+\b (Peter Kropholler)
+If $G$ is FP over the rationals, is there a bound on the 
+orders of finite subgroups of $G$?  
+\e
+
+Kropholler showed that this was the case for any $G$ that is 
+both (a) of finite rational cohomological dimension and 
+(b) type $FP_\infty$ over the integers.   
+
+(Leary) This can be extended to the case when $G$ is only assumed to be 
+$FP_n$ over the integers, for n = the rational coh. dim. of $G$.
+
+\section{Splittings, Accessibility, JSJ Decompositions}
+
+
+\b
+(Potyagailo) {\rm Let $G\subset SO_+(n,1)$ be a geometrically finite,
+torsion-free, non-elementary Kleinian group. Say that $G$ splits over
+an essentially non-maximal parabolic subgroup $C\subset G$ as
+$G=A*_{C}B$ (resp. $G=A*_C$) if $C$ is contained in a parabolic subgroup
+$C'$ of higher rank such that $C'$ is not conjugate to a subgroup of
+$A$ or $B$.}
+
+Is the following true: $G$ is co-Hopfian iff it does not split over
+trivial or essentially non-maximal parabolic subgroup? Note that the
+latter condition is equivalent to saying that the parabolic splittings
+are $K$-acylindrical (in the sense of Z.Sela) for a uniformly bounded
+$K$.\e
+
+\b
+(Swarup) {\rm Let $G$ be a finitely presented group. Consider a maximal
+graph of groups decomposition of $G$ with
+finite edge groups and pass to the collection of vertex groups.
+For each vertex group consider a maximal graph of groups decomposition
+with 2-ended edge groups and pass to the collection of vertex groups.
+Then split again along finite groups, then along two-ended groups  etc.}
+
+{\bf Conjecture 1:} There is a finitely presented group for which this
+process never terminates.
+
+{\bf Conjecture 2 (Strong Accessibility):} For hyperbolic groups (and for
+CAT(0) groups) this process always terminates.\e
+Delzant-Potyagailo proved Strong Accessibility for hyperbolic groups without
+2-torsion.
+
+Note: For CAT(0) groups it would be natural to allow splittings over 
+virtually abelian subgroup in the process. For general f.p. groups 
+splittings over slender (small?) subgroups should be allowed.
+
+\b
+(Sageev) Is there a f.p. 1-ended group $G$ with $G\cong G*_{\Z}$? \e
+Note
+(Mitra) that such $G$ could not be co-Hopfian. In particular, $G$ could
+not be torsion-free hyperbolic, by a theorem of Z. Sela.
+
+\b
+(Swarup) Show that the JSJ decomposition of a Haken 3-manifold $M$
+depends only on $\pi_1M$ and not on the peripheral structure. Deduce
+Johannson's deformation theorem: A homotopy equivalence $M\to N$
+between Haken manifolds can be deformed so it induces a homeomorphism
+between non-SFS components of the JSJ decompositions and induces a
+homotopy equivalence between SFS pieces.\e
+
+
+Update: This is answered by Scott-Swarup.
+
+\b
+(Papasoglou)
+Is there a f.p. torsion-free group $G$ that does not split over a
+virtually 
+abelian subgroup, but has infinitely many splittings over $F_2$?
+\e
+
+This question is motivated by the fact that an irreducible atoroidal
+closed 3-manifold has only finitely many incompressible surfaces of
+any fixed genus.
+
+\section{General Questions}
+
+
+
+
+\b
+(Eilenberg-Ganea) Is there a group $G$ of cohomological dimension 2 and
+geometric dimension 3?\e
+
+\b
+(Shalen) If a finitely presented group $G$ acts nontrivially (i.e.
+without global fixed points) on an $\R$-tree, does it act
+nontrivially on a simplicial tree?\e
+
+\b
+(Mohan Ramachandran) {\rm See
+[Napier-Ramachandran] for motivation. 
+Consider the following two properties of a
+finitely presented group $G$:
+
+(A) $G$ virtually splits, i.e. some finite index subgroup of $G$ admits
+a nontrivial action on a simplicial tree.
+
+(B) Let $X$ be a finite complex with fundamantal group $G$. Then some
+covering space of $X$ has at least two ends.
+
+Most garden-variety groups satisfy both (A) and (B). Groups that
+satisfy property (T) satisfy neither (A) nor (B).}
+
+To what extent are (A)
+and (B) equivalent? \e
+The question makes sense for finitely generated groups
+as well.
+
+\b
+(Bowditch) Let $\Gamma$ be the Cayley graph of an infinite
+finitely generated group. Does there exist $K>0$ such that for all $R>0$
+and all vertices $v\in\Gamma\setminus B(R)$ there is an infinite
+ray from $v$ to $\infty$ which does not enter $B(R-K)$.\e
+
+Anna Erschler observed that this fails for the lamplighter group.
+
+\b
+(Noel Brady) Are there groups of type $F_n$ but not $F_{n+1}$
+($n\geq 3$) which do not contain $\Z\times \Z$? All known
+examples contain $\Z^{n-1}$.\e
+
+
+
+
+
+\b
+(Olympia Talelli)
+Is there a torsion-free group $G$ of infinite cohomological dimension such
+that there is $n_0$ with the property that if $H$ is a subgroup of $G$ with
+finite cohomological dimension $cd H$, then $cd H\leq n_0$.\e
+
+
+\b
+Can $\Z_{p^\infty}$ be embedded in an
+$FP_\infty$-group? Or in an $FP_3$-group? Can an $F_n$-group be
+embedded in an $F_{n+1}$-group ($n\geq 2$)? \e
+Higman's celebrated embedding
+theorem states that a group embeds into a finitely presented group iff it
+has a recursive presentation. Any countable group embeds into a f.g. group. 
+
+
+\b
+Compute the asymptotic dimension of CAT(0) groups, $Out(F_n)$,
+mapping class groups, nonuniform lattices, Thompson's group. Is there
+a group of finite type whose asymptotic dimension is infinite? \e
+
+Note (Misha Kapovich): Gromov states that the answer to the last question is
+positive (and the group it does not admit a uniformly proper map into the
+Hilbert space).
+
+\subsection{Finite gap question (Jens Harlander)}
+Let $G$ be a finitely generated group written as $G=F/N$ with $F$ a free group
+of finite rank. Let $\Gamma$ be a finite graph with $\pi_1(\Gamma)=F$ and let
+$\tilde\Gamma$ be the covering space of $\Gamma$ with $\pi_1(\tilde\Gamma)=N$.
+Thus the deck group of $\tilde\Gamma$ is $G$. By $d_F(N)$ denote the smallest
+number of $G$-orbits of 2-cells one needs to attach to $\tilde\Gamma$ to make
+the space simply connected, and by $d_G(\frac{N}{[N,N]})$ denote the smallest
+number of $G$-orbits of 2-cells one needs to attach to $\tilde\Gamma$ to kill
+the first homology. Thus $d_F(N)<\infty$ iff $G$ is finitely presented and
+$d_G(\frac{N}{[N,N]})<\infty$ iff $G$ is of type $FP_2$. There are examples
+(Bestvina-N. Brady) of groups of type $FP_2$ which are not finitely
+presented. A well-known question, stemming from the 1965 work off C.T.C. Wall,
+becomes:
+
+\b Is there an example of a {\it finitely presented} group $G=F/N$ such that
+   $d_G(\frac{N}{[N,N]})<d_F(N)(<\infty)$? \e 
+   
+   One approach to construct such an example is the following. Suppose $H=F/N$
+   is finitely presented and contains as subgroups groups of the form
+   $C^n=C\times C\times \cdots\times C$ for all $n$. Define $G_n=H*_{C^n}H$
+   which is written as $F*F/N_n$ in the obvious way. If $C$ is finite and
+   perfect, then $d_{F*F}(\frac{N_n}{[N_n,N_n]})$ is independent of $n$. 
+
+\b If $C$ is nontrivial and finite, is $\lim_{n\to\infty}d_{F*F}(N_n)=\infty$?
+\e 
+
+
+\section{2-complexes}
+
+\b (Whitehead) Is every subcomplex of an aspherical 2-complex aspherical?\e
+
+\b (Andrews-Curtis) If $K$ and $L$ are simple homotopy equivalent
+finite 2-complexes, can one transform $K$ to $L$ by a sequence of elementary
+collapses and expansions of 1- and 2-cells, and by sliding 2-cells
+(i.e. reattaching them by maps homotopic to the old attaching maps)?\e
+This is unknown even when $K$ is contractible and $L$ is a point.
+
+\b
+(Wise)
+Is there a finite aspherical 2-complex $X$ with $\pi_1(X)$ coherent
+and with $\chi(X)\geq 2$?
+\e
+
+\section{Symmetric Spaces}
+
+
+\b (Igor Belegredek)
+Let $X$ be a non-positively curved symmetric space.
+Find conditions on a group $\Gamma$ so that the space of conjugacy
+classes of faithful discrete representations of $\Gamma$
+into the isometry group of $X$ is compact (non-compact).\e
+
+Notes (Belegradek): 
+Suppose a sequence of faithful discrete representations goes to infinity. 
+That defines a natural isometric action of $\Gamma$ on the asymptotic
+cone of $X$, that is an Euclidean Tits building according to Kleiner-Leeb.
+The action is small (in a certain sense) and has no global fixed point. 
+Thus it is enough to understand what groups cannot (can) have such action.
+First example to look at is when $X$ is a product of two rank one spaces,
+so the asymptotic cone of $X$ is a product of two trees.
+
+
+\b
+(Belegredek)
+Is there a 3-complex $X$ (not necessarily aspherical) which is
+not homotopy equivalent to a 2-complex but $H^3(X;\{G\})=0$ for all
+local coefficients? \e
+
+The condition is equivalent to saying that $X$ is dominated by a
+finite 2-complex, or that $id:X\to X$ is homotopic to a map into the
+2-skeleton. 
+
+\section{Quasi-Isometries}
+
+\b
+Study the quasi-isometry group $QI(\R^n)$. How big is it?\e
+
+\b
+(Kleiner) What are the quasi-isometries of the 3-dimensional
+group $Sol$?\e
+
+\b
+(Kleiner) What are the q.i's of the Gromov-Thurston examples
+of negatively pinched manifolds?\e
+
+\b
+(Feighn) {\rm Let $\phi:F_n\to F_n$ be an automorphism of the free
+group $F_n$ and let $M_\phi$ be its mapping torus. }
+
+Classify these groups up to quasi-isometry.\e
+
+Note: It was shown by [Macura] that if two automorphisms have polynomial
+growths with distinct degrees, then their mapping tori are not
+quasi-isometric. 
+
+\b
+(Bridson) Same as above for automorphisms $\Z^n\to \Z^n$.\e
+
+\b
+(Bridson) Is $G\times \Z$ 
+quasi-isometric to $G$ for $G=$Thompson's group? Any
+f.g. group?\e
+
+
+
+
+
+
+\section{Mapping Class Groups, $Out(F_n)$}
+
+\b
+(Levitt) Can every measured geodesic lamination with 2-sided
+leaves on a non-orientable compact hyperbolic surface be approximated
+by a simplicial measured geodesic lamination with 2-sided leaves?\e
+Remark: The subspace $\Omega$ of the sphere of geodesic measured
+laminations that contain 1-sided leaves is open and dense (of full
+measure, [Danthony-Nogueira]). More generally, understand the action
+of the mapping class group on the space of projectivized measured
+laminations. Is the action minimal on the complement of $\Omega$.  
+
+\b
+(Lubotzky) Does $Out(F_n)$ have the congruence subgroup property?\e
+If $G\subset F_n$ is a characteristic subgroup of finite index, then kernels
+of homomorphisms to $Out(F_n/G)$ are called congruence subgroups.
+
+\b
+(Kapovich) a) Let $\Sigma_g$ be the closed orientable surface of
+genus $g$. Is there a faithful representation $\pi_1(\Sigma_g)\to
+MCG(\Sigma_h)$ into a mapping class group such that the image consists
+of pseudo-Anosov classes plus identity (for some $g,h>1$)?
+
+b) Is there a 4-manifold $M$ which is a surface bundle over a surface
+s.t.  $\pi_1(M)$ is word-hyperbolic? Or so that $M$ is hyperbolic?\e
+                                                                       
+\b
+(Bowditch) Is the Weil-Petersson metric on Teichm\" uller space
+hyperbolic?  Is it quasi-isometric to the curve complex? \e
+The latter is
+word-hyperbolic by [Mazur-Minsky]. 
+
+Update: J. Brock proved that W-P space is quasi-isometric to the
+``pants complex'' ({\tt
+http://www.math.uchicago.edu/$\sim$brock/home/text/papers/wp/www/wp.ps.gz}).
+
+Brock-Farb have announced (October 2000) that the space is
+hyperbolic for a torus with $\leq 2$ punctures and a sphere with $\leq
+5$ punctures, but not hyperbolic for more complicated surfaces. A
+related result was announced by Sumio Yamada: the completion of the
+Weil-Petersson metric is a CAT(0) space with ideal points coming in
+natural pieces, with each piece the metric product of simpler
+Weil-Petersson spaces.
+
+\b
+(Brock) What is the rank of the Weil-Petersson metric? What is the
+rank of the mapping class group?
+\e
+
+The {\it rank} of a metric space $X$ is the maximal $n$ such that $X$
+admits a quasi-isometric embedding $\R^n\to X$. Brock-Farb show that a
+lower bound for W-P is $\frac 12 (3g-3+b)$ (Yamada's result above predicts
+that the rank is the maximal number of disjoint subsurfaces with
+noncompact Teichm\" uller space, and the Brock-Farb result confirms
+this as a lower bound). For the mapping class group, a lower bound is
+given by a maximal curve system -- the associated group of Dehn twists
+is embedded quasi-isometrically.
+                                                                      
+
+\subsection{Automorphisms of free groups (Gilbert Levitt)}
+$\alpha:F_n\to F_n$ will denote an automorphism. 
+
+\b
+Assuming that the fixed subgroup $Fix(\alpha)$ is cyclic, find a bound on
+the length of a generator of $Fix(\alpha)$ in terms of the complexity of
+$\alpha$. \e
+(ed. comm.: an easier version of the question would be to bound the
+length of the generator of $Fix(\alpha)$ in terms of the complexity of a
+relative train-track representative of $\alpha$.)
+
+\b
+Which $\alpha$ preserve an order (invariant under right translations) on
+$F_n$? If $\alpha$ has periodic elements it cannot preserve an order. Are
+there other obstructions? \e
+A result of Perron-Rolfsen asserts that if
+$\alpha_{ab}\in GL(n,\Z)$ has all eigenvalues $>0$ then $\alpha$ preserves an
+order. 
+
+\b
+Does $Out(F_n)$ ($n>2$) have a right orderable subgroup of finite index?\e
+It is a theorem of Dave Witte (Proc.A.M.S. 122 (1994), no. 2, 333--340) that
+$SL_n(\Z)$ ($n>2$) does not have a right orderable subgroup of finite
+index. Mapping class groups of surfaces with nonempty boundary are orderable
+([Short-Wiest] following Thurston). 
+
+\b Can the mapping class group (or a finite index subgroup of it) of a closed
+surface be embedded into $Out(F_n)$? Into the mapping class group of a
+punctured surface?  \e
+
+
+\b Do finite index subgroups of $Out(F_n)$ ($n>2$) have property $(FA)$, i.e.
+does every isometric action of such a subgroup on a simplicial tree (or even
+an $\R$-tree) have a global fixed point?\e
+
+Update: Lubotzky constructed a finite index subgroup of $Out(F_3)$
+that maps onto a nonabelian free group.
+
+
+\b
+(Grigorchuk)
+$Aut(F_n)$ acts on the space $\partial_3 F_n$ of triples of distinct
+ends of $F_n$. Denote by $Y_n$ the compact space (Cantor set) the
+quotient space of $\partial_3F_n$ by the group of inner
+automorphisms. Thus $Out(F_n)$ acts on $Y_n$. Describe the dynamics of
+this action; in particular the dynamics of any individual outer
+automorphism. 
+\e
+
+\subsection{Schottky groups in mapping class groups (Lee Mosher)}
+Recall that a {\it Schottky group} is a subgroup $F$ of $Isom(\H^n)$ which is
+free of finite rank, discrete, consists of loxodromic elements, and  every
+orbit is quasi-convex.  Similarly, we define a Schottky subgroup of
+$Isom(Teich(S))\cong MCG(S)$ where we replace ``loxodromic'' by
+``pseudoAnosov''. Note that $MCG(S)$ acts discretely on $Teich(S)$, so the
+word ``discrete'' can be omitted from the definition.
+
+\b
+Do there exist f.g. free subgroups of $MCG(S)$ consisting of identity and
+   pseudoAnosov mapping classes which are not Schottky?\e
+
+If such a subgroup $F$ exists, then $\pi_1(S)\rtimes F$ is not
+word-hyperbolic, but has no Baumslag-Solitar subgroups. Potential candidates
+for such $F$ might be found as subgroups of Whittlesey's example.
+
+\b Do there exist non-free pseudoAnosov subgroups?\e
+
+\b Is there an $Out(F_n)$ analog of the above? \e
+
+One difficulty is that the geometry of Outer Space is not well understood. It
+is still true (Bridson-Vogtmann) that the group of simplicial homeomorphisms
+of Outer Space is $Out(F_n)$. It is not clear what a good metric on Outer
+Space should be. For example, if $\alpha$ is an irreducible automorphism, then
+the set of train-tracks for $\alpha$ should be a quasi-line, and these
+quasi-lines for $\alpha$ and $\alpha^{-1}$ should be a uniform distance apart
+(in the case of $MCG$ they coincide). Our ignorance is exemplified in the
+following:
+
+\b Given $n$ is there a uniform constant $K$ such that for every irreducible
+   automorphism $\alpha:F_n\to F_n$
+   $$\frac{\log\lambda(\alpha)}{\log\lambda(\alpha^{-1})}\leq K$$ where
+   $\lambda(f)$ denotes the growth rate of $f$?\e ($K=1$ in the case of $MCG$.)
+
+\subsection{Betti numbers of finite covers (Andrew Casson)}
+
+\b \label{1}
+Does every automorphism $h:F_n\to  F_n$ leave invariant a finite index
+   subgroup $K$ such that $h_{ab}:K/K'\to K/K'$ has an eigenvalue which is a
+   root of unity?\e
+
+\b \label{2}
+Does every closed 3-manifold $M$ which fibers over $S^1$ with fiber of
+   genus $\geq 2$ have a finite cover $\tilde M$ with $b_1(\tilde M)>1$?\e
+   
+   Note: Q \ref{2} is a ``warmup'' for the well-known conjecture that every
+   aspherical 3-manifold has a finite cover with positive $b_1$. Q \ref{2} is
+   Q \ref{1} with surface groups instead of free groups.
+
+\subsection{QI rigidity of MCG and $Out(F_n)$ (Martin Bridson)}
+
+\b Is $MCG(S_g)\to QI(MCG(S_g))$ an isomorphism for $g\geq 3$? \e
+For $g=2$ the
+hyper-elliptic involution is central and has to be quotiented out from the
+left-hand side.
+
+\b Suppose that $\phi:MCG(S_g)\to MCG(S_g)$ is a quasi-isometry. Does $\phi$
+   map maximal flats to maximal flats (``maximal flats'' come from maximal
+   rank abelian subgroups)?\e
+
+Note: By work of Ivanov, yes to \#2 implies yes to \#1.
+
+\b Same questions for $Out(F_n)$.\e
+
+\b If $\Gamma$ is an irreducible uniform lattice in a higher rank connected
+   semisimple Lie group, does every homomorphism $\Gamma\to Out(F_n)$
+   necessarily have finite image?\e
+
+This is true for nonuniform lattices as observed by Bridson-Farb (consequence
+of the Kazhdan-Margulis superrigidity and the fact that solvable subgroups of
+$Out(F_n)$ are virtually abelian [Bestvina-Feighn-Handel]).  
+
+
+\subsection{Linearity of mapping class groups (Joan Birman)}
+\b Is $MCG(S_{g,b,n})$ linear? \e
+Here $g$ is the genus, $b$ the number of
+boundary components and $n$ the number of punctures. By the work of Bigelow
+and Krammer, $MCG(0,1,n)$, $MCG(0,0,n)$, and $MCG(2,0,0)$ are linear.
+
+
+\subsection{The Singular Braid Monoid (Joan Birman)}
+A {\it singular braid} is defined by a braid diagram as usual, except that in
+addition to over- and under-crossings, crossings of strands are allowed. The
+standard singular braids are
+\begin{itemize}
+\item braid $\sigma_i$ in which strand $i+1$ goes over the $i^{th}$ strand,
+  and
+\item singular braid $\tau_i$ in which strands $i$ and $i+1$ cross.
+\end{itemize}
+
+The set of singular braids on $n$ strands forms a monoid $SB_n$ generated by
+$\{\sigma_1^{\pm 1},\cdots,\sigma_{n-1}^{\pm 1},\tau_1,\cdots,\tau_{n-1}\}$. A monoid
+presentation of $SB_n$ is given in terms of these generators and the following
+relations:
+\begin{itemize}
+\item braid relations $\sigma_i\sigma_j=\sigma_j\sigma_i$ for $|i-j|>1$ and
+  $\sigma_i\sigma_{i+1}\sigma_i=\sigma_{i+1}\sigma_i\sigma_{i+1}$,
+\item $\tau_i\tau_{j}=\tau_{j}\tau_i$ for $|i-j|>1$,
+\item $\sigma_i\tau_j = \tau_j\sigma_i$ if $i=j$ or $|i-j|>1$,
+\item $\tau_i\sigma_{i+1}\sigma_i=\sigma_{i+1}\sigma_i\tau_{i+1}$,
+\item $\tau_i\sigma_{i+1}\sigma_i=\sigma_{i+1}\sigma_i\tau_{i+1}$.
+\end{itemize}
+
+See J. Birman: "New points of View in knot
+theory", Bull AMS {\bf 28}(1993), no. 2, 253-287.
+
+The singular braid monoid is closely related to Vasiliev invariants of knots.
+Define a monoid homomorphism $\Phi:SB_n\to\Z B_n$ to the group ring of the
+braid group $B_n$ by $\Phi(\sigma_i)=\sigma_i$ and
+$\Phi(\tau_i)=\sigma_i-\sigma_i^{-1}$.
+
+\b
+{\bf Conjecture.} $\Phi$ is injective.\e
+
+The proof that this is true for $n=3$ is
+due to A.Jarai, "On the monoid of singular braids", Topology and its
+Applications, {\bf 96}(1999), 109-119.
+
+It is also true on singular braids with at most two
+singularities (exercise). 
+
+
+\section{Other Questions}
+
+\b (Kevin Whyte)
+Let $K$ be a finite complex with $\pi=\pi(K)$ amenable. Is there a uniform
+bound to the betti numbers of finite covers of $K$? \e
+Related to the work of
+Andrzej Zuk on $\ell_2$-cohomology. Also related to the conjecture that such
+$\pi$ are elementary amenable.
+
+\b (Kevin Whyte)
+Is every solvable $PD(n)$ group polycyclic?\e
+
+
+\b
+(Henry Glover) Does for every finite graph $G$ the following
+$1-2-\infty$-conjecture hold: $G$ is planar, a double cover of $G$ is
+planar, or no finite cover is planar? \e
+There is a reduction (ref??) to
+the graph $G$ obtained by coning off the 1-skeleton of the octahedron.
+
+\b
+(S. Ivanov) Is there a f.p. slender group which is not
+polycyclic-by-finite? \e
+A group is slender (or Noetherian) if every
+subgroup is f.g. [Olshanskii] has constructed a f.g. counterexample.
+
+
+
+
+\b (Seymour Bachmut)
+Is $SL_2(K)$ finitely generated for $K=\Z[X,X^{-1}]$ or
+$K=F[X,X^{-1},Y,Y^{-1}]$ for a field $F$?\e
+
+\b Are 1-relator groups coherent?\e
+
+\begin{comment}
+\b
+(Y. Shalom)
+Is the following true: If $\Gamma_1,\Gamma_2$ are two lattices in a
+semisimple Lie group $G$ and $\Q-rank(\Gamma_1)<\Q-rank(\Gamma_2)$
+then $\Gamma_1$ does not embed uniformly into $\Gamma_2$.
+\e
+\end{comment}
+
+\subsection{Hopf-Thurston Conjecture (Mike Davis)}
+
+The Hopf-Thurston Conjecture asserts that if $M$ is a closed aspherical
+$2n$-manifold then $(-1)^n\chi(M)\geq 0$. The stronger Singer Conjecture
+asserts that the $\ell_2$-homology of $\tilde M$ is 0 except possibly in
+dimension $n$. See the recent Davis-Okun work. A special case (using
+right-angled Coxeter groups) of Hopf-Thurston's Conjecture is the following:
+
+Let $L$ be a flag triangulation of $S^{2k-1}$ and define
+$$\chi=1-\frac{1}{2}f_0+\frac{1}{4}f_1-\frac{1}{8}f_2+\cdots=1-\sum_{i=0}^{2k-1}(-1)^i\frac{1}{2^{i+1}}f_i$$
+  where $f_i$ is the number of $i$-simplices of $L$.
+
+\b
+{\bf Conjecture.} $(-1)^k\chi\geq 0$.\e
+
+This is true for $S^3$ (Davis-Okun) and it is also true if $L$ is the
+barycentric subdivision of another triangulation. 
+
+
+
+
+                                                            
+\subsection{Word Problem (Martin Bridson)}
+\b Do there exist groups $G$ with balanced presentation (same number of
+   generators and relations), with $H_1(G)=0$ and with unsolvable word
+   problem?\e
+
+Note: The standard examples of groups with unsolvable word problem have more
+relations than generators. The condition $H_1(G)=0$ is added to rule out
+counterexamples obtained by adding silly generators. Any other condition that
+rules this out is acceptable.
+
+\b Is there a sequence of (perfect, of course) groups with balanced
+presentations among which one cannot recognize trivial groups?  \e   
+
+
+\subsection{Membership Problem in semigroups (John Meakin)}
+Let $G$ be a 1-relator group with the relator $W$ a cyclically reduced word in
+the generators. Let $P$ be the submonoid of $G$ generated by all prefixes of
+$W$. 
+
+\b Is the membership problem for $P$ in $G$ decidable?\e
+
+For motivation and special cases, see [S. Ivanov - S. Margolis - J. Meakin,
+One relator inverse monoids and 1-relator groups, J. Pure Applied Alg.]. The
+paper reduces the word problem in $G$ to the question above.
+
+
+\end{document}
